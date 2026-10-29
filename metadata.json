@@ -1,0 +1,6 @@
+{
+  "name": "StudyFlow - Organizador de Objetivos de Estudo",
+  "description": "Aplicação acolhedora e simples para estudantes iniciantes organizarem suas metas, prazos e rotina de estudos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
