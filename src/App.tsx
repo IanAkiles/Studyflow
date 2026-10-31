@@ -6,6 +6,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Header } from './components/Header';
 import { StatsSummary } from './components/StatsSummary';
+import { DpeStudyPlan } from './components/DpeStudyPlan';
 import { ObjectiveCard } from './components/ObjectiveCard';
 import { ObjectiveFormModal } from './components/ObjectiveFormModal';
 import { DeleteConfirmModal } from './components/DeleteConfirmModal';
@@ -136,6 +137,9 @@ export default function App() {
 
       {/* Conteúdo Principal */}
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8">
+        {/* Plano de estudos para concurso DPE-AM (independente das metas comuns) */}
+        <DpeStudyPlan />
+
         {/* Painel de Estatísticas e Progresso */}
         <StatsSummary objectives={objectives} />
 
