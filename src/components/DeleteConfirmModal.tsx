@@ -18,9 +18,9 @@ export const DeleteConfirmModal: React.FC<DeleteConfirmModalProps> = ({
   if (!isOpen || !objective) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-stone-900/50 backdrop-blur-xs flex items-center justify-center p-4">
       <div
-        className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-100 transform transition-all animate-in fade-in zoom-in-95 duration-200"
+        className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-stone-100 transform transition-all animate-in fade-in zoom-in-95 duration-200"
         role="alertdialog"
         aria-modal="true"
         aria-labelledby="delete-dialog-title"
@@ -33,7 +33,7 @@ export const DeleteConfirmModal: React.FC<DeleteConfirmModalProps> = ({
           <button
             type="button"
             onClick={onClose}
-            className="p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-xl transition-colors cursor-pointer"
+            className="p-1.5 text-stone-400 hover:text-stone-600 hover:bg-stone-100 rounded-xl transition-colors cursor-pointer"
             aria-label="Fechar"
           >
             <X className="w-5 h-5" />
@@ -41,14 +41,14 @@ export const DeleteConfirmModal: React.FC<DeleteConfirmModalProps> = ({
         </div>
 
         <div className="mt-4">
-          <h2 id="delete-dialog-title" className="text-lg font-bold text-slate-900">
+          <h2 id="delete-dialog-title" className="text-lg font-bold text-stone-900">
             Excluir este objetivo?
           </h2>
-          <p id="delete-dialog-desc" className="text-sm text-slate-600 mt-2">
+          <p id="delete-dialog-desc" className="text-sm text-stone-600 mt-2">
             Você está prestes a remover o objetivo:
           </p>
 
-          <div className="mt-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/80 text-sm font-semibold text-slate-800 break-words">
+          <div className="mt-2.5 p-3 rounded-xl bg-stone-50 border border-stone-200/80 text-sm font-semibold text-stone-800 break-words">
             "{objective.title}"
           </div>
 
@@ -57,11 +57,11 @@ export const DeleteConfirmModal: React.FC<DeleteConfirmModalProps> = ({
           </p>
         </div>
 
-        <div className="flex items-center justify-end gap-2.5 mt-6 pt-4 border-t border-slate-100">
+        <div className="flex items-center justify-end gap-2.5 mt-6 pt-4 border-t border-stone-100">
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer"
+            className="px-4 py-2.5 rounded-xl text-sm font-medium text-stone-600 hover:bg-stone-100 transition-colors cursor-pointer"
           >
             Cancelar
           </button>

@@ -1,10 +1,51 @@
 @import "tailwindcss";
 
+/*
+ * Paleta "orgânica": papel quente + verde-sálvia + pedra.
+ * Os neutros vêm do `stone` do Tailwind; o `sage` e o `paper` são definidos aqui.
+ */
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+
+  --color-paper: #faf8f3;
+
+  --color-sage-50: #f4f7f2;
+  --color-sage-100: #e6ede1;
+  --color-sage-200: #cfdcc7;
+  --color-sage-300: #aec3a3;
+  --color-sage-400: #8aa67c;
+  --color-sage-500: #6c8c5e;
+  --color-sage-600: #547149;
+  --color-sage-700: #435a3b;
+  --color-sage-800: #374933;
+  --color-sage-900: #2d3b2a;
+}
+
 @layer base {
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f8fafc;
-    color: #0f172a;
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-stone-800);
     -webkit-font-smoothing: antialiased;
   }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sage-500);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
